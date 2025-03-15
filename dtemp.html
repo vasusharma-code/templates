@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Templates - Infography</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="dtemp.css">
+</head>
+<body>
+  <div class="templates-container">
+    <nav class="template-nav">
+      <select id="template-selector">
+        <option value="template1">Modern Business</option>
+        <option value="template2">Timeline Flow</option>
+        <option value="template3">Stats Dashboard</option>
+        <option value="template4">Feature Grid</option>
+        <option value="template5">Process Flow</option>
+        <option value="template6">Comparison Chart</option>
+        <option value="template7">Data Showcase</option>
+        <option value="template8">Step Guide</option>
+        <option value="template9">Product Features</option>
+        <option value="template10">Achievement List</option>
+      </select>
+    </nav>
+
+    <!-- Template Container -->
+    <div id="dynamic-template" class="template-display">
+      <!-- Templates will be loaded here dynamically -->
+    </div>
+  </div>
+
+  <div class="template-controls">
+    <button id="preview-btn" class="control-btn">
+      <i class="fas fa-eye"></i> Preview
+    </button>
+    <button id="screenshot-btn" class="control-btn">
+      <i class="fas fa-camera"></i> Capture
+    </button>
+    <a id="download-btn" class="control-btn" download>
+      <i class="fas fa-download"></i> Download
+    </a>
+  </div>
+  <script src="dtemp.js"></script>
+</body>
+</html>

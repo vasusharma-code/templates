@@ -1,0 +1,395 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --accent-color: #f59e0b;
+    --text-color: #333333;
+    --light-bg: #ffffff;
+    --dark-bg: #1a1a1a;
+}
+
+/* Global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f5f5f5;
+}
+
+/* Container Styles */
+.templates-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.template-nav {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#template-selector {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+}
+
+.template-display {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Control Buttons */
+.template-controls {
+    text-align: center;
+    margin: 20px;
+}
+.control-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: background 0.3s ease;
+}
+.control-btn:hover {
+    background: #1d4ed8;
+}
+#download-btn {
+    display: none;
+    text-decoration: none;
+}
+
+/* Template Specific Styles */
+
+/* Template 1: Modern Business */
+.modern-business-template {
+    padding: 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+.modern-business-template .template-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.modern-business-template .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.modern-business-template .info-card {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.modern-business-template .info-card:hover {
+    transform: translateY(-5px);
+}
+.modern-business-template .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Template 2: Timeline Flow */
+.timeline-flow-template {
+    padding: 30px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+.timeline-flow-template .template-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+.timeline-flow-template .timeline-container {
+    position: relative;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.timeline-flow-template .timeline-item {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+.timeline-flow-template .timeline-item.left {
+    justify-content: flex-start;
+}
+.timeline-flow-template .timeline-item.right {
+    justify-content: flex-end;
+}
+.timeline-flow-template .timeline-icon {
+    margin: 0 1rem;
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+.timeline-flow-template .timeline-content {
+    background: var(--light-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Template 3: Stats Dashboard */
+.stats-dashboard-template {
+    padding: 30px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+}
+.stats-dashboard-template .template-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+.stats-dashboard-template .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+.stats-dashboard-template .stat-card {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.stats-dashboard-template .stat-card .icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+/* Template 4: Feature Grid */
+.feature-grid-template {
+    padding: 35px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+.feature-grid-template .template-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+.feature-grid-template .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+.feature-grid-template .feature-card {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.feature-grid-template .feature-card .icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* Template 5: Process Flow */
+.process-flow-template {
+    padding: 40px;
+    background: linear-gradient(135deg, #fff7e6 0%, #ffeac2 100%);
+}
+.process-flow-template .template-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+}
+.process-flow-template .process-steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.process-flow-template .step {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 1rem;
+    width: calc(33% - 1rem);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+.process-flow-template .step .icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Template 6: Comparison Chart */
+.comparison-chart-template {
+    padding: 40px;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+}
+.comparison-chart-template .template-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+.comparison-chart-template .chart {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.comparison-chart-template .chart .item {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 1rem;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.comparison-chart-template .chart .item .icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* Template 7: Data Showcase */
+.data-showcase-template {
+    padding: 40px;
+    background: linear-gradient(135deg, #e9f8f9 0%, #d1f0f5 100%);
+}
+.data-showcase-template .template-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+.data-showcase-template .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+.data-showcase-template .data-card {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.data-showcase-template .data-card .icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+/* Template 8: Step Guide */
+.step-guide-template {
+    padding: 40px;
+    background: linear-gradient(135deg, #f9f3ff 0%, #eedcff 100%);
+}
+.step-guide-template .template-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+.step-guide-template .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.step-guide-template .step {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.step-guide-template .step .icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Template 9: Product Features */
+.product-features-template {
+    padding: 40px;
+    background: linear-gradient(135deg, #e6f7ff 0%, #ccf2ff 100%);
+}
+.product-features-template .template-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+.product-features-template .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+.product-features-template .feature {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.product-features-template .feature .icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+/* Template 10: Achievement List */
+.achievement-list-template {
+    padding: 40px;
+    background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+}
+.achievement-list-template .template-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+.achievement-list-template ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.achievement-list-template ul li {
+    background: var(--light-bg);
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.achievement-list-template ul li .icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .templates-container {
+        padding: 10px;
+    }
+    .feature-grid-template .grid,
+    .process-flow-template .process-steps,
+    .comparison-chart-template .chart {
+        flex-direction: column;
+    }
+}
